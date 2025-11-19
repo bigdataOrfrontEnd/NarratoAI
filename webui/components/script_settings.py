@@ -290,7 +290,7 @@ def short_drama_summary(tr):
     video_theme = st.text_input(tr("短剧名称"))
     st.session_state['video_theme'] = video_theme
     # 数字输入框
-    temperature = st.slider("temperature", 0.0, 2.0, 0.7)
+    temperature = st.slider("temperature", 0.0, 2.0, 0.7,help="temperature：控制生成的随机性。0.0 → 更确定性（可复现），2.0 → 更高随机性/创造性。")
     st.session_state['temperature'] = temperature
     return video_theme
 
